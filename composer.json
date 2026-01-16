@@ -1,9 +1,10 @@
 {
   "name": "palasthotel/pro-litteris",
   "description": "Pro-Litteris WordPress plugin implementation.",
+  "type": "wordpress-plugin",
   "autoload": {
     "psr-4": {
-      "Palasthotel\\ProLitteris\\": "classes"
+      "Palasthotel\\ProLitteris\\": "classes/"
     }
   },
   "require": {

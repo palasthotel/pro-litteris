@@ -16,11 +16,6 @@ Integrate ProLitteris into your wordpress.
 
 == Installation ==
 
-1. Upload `pro-litteris-integration.zip` to the `/wp-content/plugins/` directory
-1. Extract the Plugin to a `pro-litteris-integration` Folder
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Add ProLitteris
-
 == Frequently Asked Questions ==
 
 
@@ -28,6 +23,9 @@ Integrate ProLitteris into your wordpress.
 
 
 == Changelog ==
+
+= 1.6.1 =
+* Update: Rework file structure
 
 = 1.6.0 =
 * Feature: filter for paywall pixel variant
