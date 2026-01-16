@@ -1,1 +1,0 @@
-pro-litteris-de_DE.mo
