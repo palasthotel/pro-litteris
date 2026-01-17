@@ -2,8 +2,8 @@
   "name": "pro-litteris",
   "version": "1.0.0",
   "scripts": {
-    "watch": "wp-scripts start src/scripts/gutenberg.js --output-path=public/dist",
-    "build": "wp-scripts build src/scripts/gutenberg.js --output-path=public/dist",
+    "watch": "wp-scripts start src/gutenberg.js --output-path=dist",
+    "build": "wp-scripts build src/gutenberg.js --output-path=dist",
     "packages-update": "wp-scripts packages-update",
     "install-legacy": "npm i install --legacy-peer-deps"
   },
