@@ -32,6 +32,9 @@ if ($centralAutoloader && class_exists('\Composer\InstalledVersions', false)) { 
             $managedByCentralAutoloader = $installPath && realpath($installPath) && realpath($installPath) === realpath(__DIR__); // check if the it is acutally THIS version and dir installed
         }
     } catch (\Throwable $e) {
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('[ProLitteris] InstalledVersions exception: ' . $e->getMessage());
+        }
     }
 }
 
@@ -48,9 +51,9 @@ if (!$centralAutoloader || !$managedByCentralAutoloader) {
 }
 if (defined('WP_DEBUG') && WP_DEBUG) {
     error_log('[ProLitteris] centralAutoloader=' . ($centralAutoloader ? '1' : '0')
+        . ' classExists=' . (class_exists('\Composer\InstalledVersions', false) ? '1' : '0')
+        . ' installPath=' . ($installPath ?? '(none)')
         . ' managed=' . ($managedByCentralAutoloader ? '1' : '0'));
-    $p = $installPath ?? '(none)';
-    error_log('[ProLitteris] installPath=' . $p . ' realInstall=' . (is_string($p) ? (realpath($p) ?: '(false)') : '(n/a)') . ' realDir=' . (realpath(__DIR__) ?: '(false)'));
 }
 
 /**
