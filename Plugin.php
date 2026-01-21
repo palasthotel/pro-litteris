@@ -25,7 +25,7 @@ $centralAutoloader = (defined('PALASTHOTEL_COMPOSER_CENTRAL') && constant('PALAS
     || did_action('palasthotel/central_autoloader_loaded') > 0;
 
 $managedByCentralAutoloader = false;
-if ($centralAutoloader && class_exists('\Composer\InstalledVersions', false)) { //checks if autoloader exists
+if ($centralAutoloader && class_exists('\Composer\InstalledVersions', true)) { //checks if autoloader exists
     try {
         if (\Composer\InstalledVersions::isInstalled(COMPOSER_PACKAGE)) { // this only checks for some version not the directory 
             $installPath = \Composer\InstalledVersions::getInstallPath(COMPOSER_PACKAGE);
