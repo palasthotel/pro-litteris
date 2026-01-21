@@ -47,6 +47,8 @@ if (!$centralAutoloader || !$managedByCentralAutoloader) {
     }
 }
 if (defined('WP_DEBUG') && WP_DEBUG) {
+    error_log('[ProLitteris] centralAutoloader=' . ($centralAutoloader ? '1' : '0')
+        . ' managed=' . ($managedByCentralAutoloader ? '1' : '0'));
     $p = $installPath ?? '(none)';
     error_log('[ProLitteris] installPath=' . $p . ' realInstall=' . (is_string($p) ? (realpath($p) ?: '(false)') : '(n/a)') . ' realDir=' . (realpath(__DIR__) ?: '(false)'));
 }
