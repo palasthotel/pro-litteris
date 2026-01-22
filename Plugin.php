@@ -44,7 +44,7 @@ if (!$centralAutoloader || !$managedByCentralAutoloader) {
         require_once $local;
     } else {
         add_action('admin_notices', function () {
-            echo '<div class="notice notice-error"><p>Bitte "composer install" im Plugin-Ordner ausführen.</p></div>';
+            echo '<div class="notice notice-error"><p>Bitte "composer install" im ' . COMPOSER_PACKAGE .  ' Plugin-Ordner ausführen.</p></div>';
         });
         return;
     }
