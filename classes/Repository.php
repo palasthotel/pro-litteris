@@ -142,7 +142,7 @@ class Repository extends _Component {
 			);
 		}
 
-		$response = $this->plugin->api->pushMessage( $message );
+		$response = $this->plugin->api->pushMessage( $message, $post_id );
 
 		if ( $response instanceof WP_Error ) {
 			return $response;

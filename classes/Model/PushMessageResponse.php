@@ -11,18 +11,14 @@ use WP_Error;
 class PushMessageResponse extends _BaseAPIResponse {
 
 
-	public function __construct( string $response ) {
+	public function __construct( string $response, $post_id ) {
 		parent::__construct( $response );
-
-		if ( $response instanceof WP_Error ) {
-			return;
-		}
 
 		if ( empty( $this->data->pixelUid ) || ! is_string( $this->data->pixelUid ) ) {
 
 			$this->error = new WP_Error(
 				Plugin::ERROR_CODE_RESPONSE,
-				"No pixelUid in response.\n\n$response"
+				"No pixelUid in response.\n\n$response\n\npost_id: $post_id"
 			);
 
 			return;
@@ -32,7 +28,7 @@ class PushMessageResponse extends _BaseAPIResponse {
 
 			$this->error = new WP_Error(
 				Plugin::ERROR_CODE_RESPONSE,
-				"No title in response.\n\n$response"
+				"No title in response.\n\n$response\n\npost_id: $post_id"
 			);
 
 			return;
@@ -42,7 +38,7 @@ class PushMessageResponse extends _BaseAPIResponse {
 
 			$this->error = new WP_Error(
 				Plugin::ERROR_CODE_RESPONSE,
-				"No Participants in response.\n\n$response"
+				"No Participants in response.\n\n$response\n\npost_id: $post_id"
 			);
 
 			return;

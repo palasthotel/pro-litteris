@@ -38,11 +38,11 @@ class API {
 	 *
 	 * @return PushMessageResponse|WP_Error
 	 */
-	public function pushMessage( $message ) {
+	public function pushMessage( $message, $post_id ) {
 		$response = $this->request("/rest/api/1/message", $message);
 		if($response instanceof WP_Error) return $response;
 
-		return new PushMessageResponse($response);
+		return new PushMessageResponse($response, $post_id);
 	}
 
 	/**
