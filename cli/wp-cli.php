@@ -89,17 +89,26 @@ class CLI {
 		$postIds = $plugin->database->getPostIdsReadyForMessage($year);
 		$progress = \WP_CLI\Utils\make_progress_bar( 'Reporting', count($postIds) );
 		$success =  0;
+        $error = 0;
 		foreach ($postIds as $postId){
+
+            $reportedSuccessful = true;
+
 			if(!WP_DEBUG){
-				$plugin->repository->reportPost($postId);
+				$reportedSuccessful = $plugin->repository->reportPost($postId);
 				// wait for the report to really have finished (I guess on their side).
 				// else we run into error":{"code":100,"message":"Technical error (too many requests).
 				usleep(50 * 1000);
-			}
-			$success++;
+            }
+
+            if ($reportedSuccessful) {
+			    $success++;
+            } else {
+                $error++;
+            }
+
 			$progress->tick();
 		}
-		$error = $success - count($postIds);
 		\WP_CLI::success( "Reporting year $year done! $success successfull, $error errored." );
 
 	}
