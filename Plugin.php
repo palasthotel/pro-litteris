@@ -49,7 +49,7 @@ if (!$centralAutoloader || !$managedByCentralAutoloader) {
         return;
     }
 }
-if (defined('WP_DEBUG') && WP_DEBUG) {
+if (defined('PH_CENTRAL_AUTOLOADER_DEBUG') && PH_CENTRAL_AUTOLOADER_DEBUG) {
     error_log('[ProLitteris] centralAutoloader=' . ($centralAutoloader ? '1' : '0')
         . ' classExists=' . (class_exists('\Composer\InstalledVersions', false) ? '1' : '0')
         . ' installPath=' . ($installPath ?? '(none)')
