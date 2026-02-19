@@ -5,18 +5,15 @@ namespace Palasthotel\ProLitteris\Components;
 use ReflectionClass;
 use ReflectionException;
 
-/**
- * @property string path
- * @property string url
- * @property string basename
- * @version 0.1.2
- */
 abstract class Plugin {
 
 	/**
 	 * @var ReflectionClass
 	 */
 	private $ref;
+    public string $path;
+    public string $url;
+    public string $basename;
 
 	private $tooLateForTextdomain;
 

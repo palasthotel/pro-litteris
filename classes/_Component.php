@@ -2,10 +2,10 @@
 
 namespace Palasthotel\ProLitteris;
 
-/**
- * @property Plugin plugin
- */
 abstract class _Component {
+
+    public Plugin $plugin;
+
 	/**
 	 * _Component constructor.
 	 *

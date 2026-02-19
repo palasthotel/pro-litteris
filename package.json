@@ -1,6 +1,6 @@
 {
   "name": "pro-litteris",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "scripts": {
     "watch": "wp-scripts start src/gutenberg.js --output-path=dist",
     "build": "wp-scripts build src/gutenberg.js --output-path=dist",

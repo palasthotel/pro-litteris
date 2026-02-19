@@ -3,13 +3,10 @@
 
 namespace Palasthotel\ProLitteris\Components;
 
-use wpdb;
-
-/**
- * @property wpdb wpdb
- * @version 0.1.1
- */
 abstract class Database {
+
+    /** @var \wpdb */
+    public $wpdb;
 
 	public function __construct() {
 		global $wpdb;

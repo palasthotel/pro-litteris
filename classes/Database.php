@@ -6,12 +6,11 @@ namespace Palasthotel\ProLitteris;
 use Palasthotel\ProLitteris\Model\Message;
 use Palasthotel\ProLitteris\Model\Pixel;
 
-/**
- * @property string table
- * @property string tableResponses
- * @property string $tableMessages
- */
 class Database extends Components\Database {
+
+    public string $table;
+    public string $tableResponses;
+    public string $tableMessages;
 
 	public function init() {
 		$this->table          = $this->wpdb->prefix . "pro_litteris_pixel_pool";

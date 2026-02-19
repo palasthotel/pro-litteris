@@ -3,7 +3,7 @@
 /**
  * Plugin Name: ProLitteris
  * Description: Integration of prolitteris.ch services.
- * Version: 1.6.3
+ * Version: 1.6.4
  * Author: Palasthotel <rezeption@palasthotel.de> (Edward Bock)
  * Author URI: https://palasthotel.de
  * Text Domain: pro-litteris
@@ -56,23 +56,22 @@ if (defined('PH_CENTRAL_AUTOLOADER_DEBUG') && PH_CENTRAL_AUTOLOADER_DEBUG) {
         . ' managed=' . ($managedByCentralAutoloader ? '1' : '0'));
 }
 
-/**
- * @property PostsTable postList
- * @property Post post
- * @property User user
- * @property TrackingPixel pixel
- * @property Database database
- * @property Repository repository
- * @property API api
- * @property Schedule schedule
- * @property DashboardWidget dashboardWidget
- * @property WP_REST rest
- * @property Assets assets
- * @property Gutenberg gutenberg
- * @property Migrate migrate
- * @property Media $media
- */
 class Plugin extends Components\Plugin {
+
+    public PostsTable $postList;
+    public Post $post;
+    public User $user;
+    public TrackingPixel $pixel;
+    public Database $database;
+    public Repository $repository;
+    public API $api;
+    public Schedule $schedule;
+    public DashboardWidget $dashboardWidget;
+    public WP_REST $rest;
+    public Assets $assets;
+    public Gutenberg $gutenberg;
+    public Migrate $migrate;
+    public Media $media;
 
 	/**
 	 * Domain for translation

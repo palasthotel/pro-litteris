@@ -7,11 +7,10 @@ use Palasthotel\ProLitteris\Model\Pixel;
 use Palasthotel\ProLitteris\Model\PreventPixelAssign;
 use WP_Error;
 
-/**
- * @property Database database
- * @property API api
- */
 class Repository extends _Component {
+
+    public Database $database;
+    public API $api;
 
 	public function onCreate() {
 		parent::onCreate();
