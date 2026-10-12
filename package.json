@@ -24,7 +24,7 @@
     "@wordpress/date": "^5.56.0",
     "@wordpress/editor": "^15.1.0",
     "@wordpress/element": "^8.8.0",
-    "@wordpress/i18n": "^6.29.0",
+    "@wordpress/i18n": "^6.30.0",
     "@wordpress/plugins": "^7.56.0",
     "@wordpress/scripts": "^36.0.0"
   }
