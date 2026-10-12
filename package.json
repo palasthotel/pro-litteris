@@ -19,7 +19,7 @@
     "pack": "SLUG=palasthotel-integration-for-prolitteris bash ../github-workflows/wp-plugin/bin/pack.sh"
   },
   "devDependencies": {
-    "@wordpress/components": "^41.0.0",
+    "@wordpress/components": "^42.0.0",
     "@wordpress/data": "^10.56.0",
     "@wordpress/date": "^5.56.0",
     "@wordpress/editor": "^15.1.0",
