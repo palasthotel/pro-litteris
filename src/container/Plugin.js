@@ -172,7 +172,7 @@ const Message = ({message = {}, draft = {}, pushError, onSubmitReport})=>{
                 <p>{__("Reported successfully 🎉", 'palasthotel-integration-for-prolitteris')}</p>
                 <Button
                     disabled={isDirtyState || isSaving}
-                    isSecondary
+                    variant="secondary"
                     title={__("Save the post before reporting.", 'palasthotel-integration-for-prolitteris')}
                     onClick={onSubmitReport}
                 >{__("Update report", 'palasthotel-integration-for-prolitteris')}</Button>
@@ -181,7 +181,7 @@ const Message = ({message = {}, draft = {}, pushError, onSubmitReport})=>{
             :
             <Button
                 disabled={isDirtyState || isSaving || isReported}
-                isPrimary
+                variant="primary"
                 title={__("Save the post before reporting.", 'palasthotel-integration-for-prolitteris')}
                 onClick={onSubmitReport}
             >
