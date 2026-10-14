@@ -15,7 +15,7 @@ jobs:
       slug: palasthotel-integration-for-prolitteris
       dev-plugin-name: Palasthotel Integration for ProLitteris - DEV
       # Requires PHP: 8.2
-      php-versions: '["8.2", "8.3", "8.4"]'
+      php-versions: '["8.2", "8.3", "8.4", "8.5"]'
       # public/dist and public/vendor are not in the repository; the pipeline builds them
       build-command: npm ci && npm run build
       # what the plugin loads, so a renamed build output fails here instead of
